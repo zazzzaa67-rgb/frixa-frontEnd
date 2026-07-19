@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+header {
+    background: #181818;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid crimson;
+}
+header img {
+    width: 70px;
+}
+header h1 {
+    color: crimson;
+    display: block;
+}
+h2{
+    display : block;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+main {
+    width: 90%;
+    margin: 40px auto;
+}
+
+/* ===== Cards ===== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.card {
+    background: #1d1d1d;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: .3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px crimson;
+}
+.card h3 {
+    color: #bbb;
+    margin-bottom: 10px;
+}
+.card p {
+    color: crimson;
+    font-size: 32px;
+    font-weight: bold;
+}
+/* ===== Referral ===== */
+.refCon {
+    margin: 40px auto;
+    width: 400px;
+    background: #1d1d1d;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+.refCon h2 {
+    margin-bottom: 15px;
+}
+#refCodeText {
+    font-size: 28px;
+    color: crimson;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+button {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+button:hover {
+    background: #ff4040;
+}
+/* ===== Recent Projects ===== */
+#recentProjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.project-card {
+    background: #1d1d1d;
+    padding: 20px;
+    border-radius: 12px;
+    transition: .3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+.project-card h3 {
+    color: crimson;
+    margin-bottom: 15px;
+}
+th , td {
+    padding : 1rem;
+    border: 1px solid #ffffff;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard|Forixa</title>
+<meta name="description"
+    content="Manage your projects, purchased services, favorites, and account information from your personalized FORIXA dashboard.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ##### FONT awesome #### -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <i id="bars" class="fa-solid fa-bars"></i>
+        <nav>
+            <img src="./images/logo.png" class="nav-logo">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">services</a>
+            <a href="chat.html">Contact Us</a>
+            <a href="Dashboard.html">Dashboard</a>
+            
+        </nav>
+        <img src="images/logo.png" alt="Forixa logo" class="logo">
+        <i id="bell" class="fa-regular fa-bell"></i>
+    </header>
+        
+    <main>
+        <section id="usInfo">
+            <img src="images/avatar.png" alt="user avatar " id="avatar">
+            <div class="InfoCon">
+                <h1>User Name</h1>
+                <p>myEmail@.com</p>
+                <button class="user">User</button>
+            </div>
+        </section>
+        <section id="overView">
+            <h2>Projects OverView</h2>
+            <div class="usprojectsCon">
+                <div>
+                    <p class="num num1">0</p>
+                    <p class="red">Active projects</p>
+                </div> 
+                <div>
+                    <p class="num num2">0</p>
+                    <p class="red">Completed</p>
+                </div> 
+                <div>
+                    <p class="num num3">0</p>
+                    <p class="red">Pending</p>
+                </div>
+            </div> 
+        </section>
+        <section id="usProjects">
+            <div class="container">
+                <h2>My projects</h2>
+                <button>View all</button>
+            </div>
+            <div class="usProjectsCon">
+                <p>You do not have any Project yet <span class="red"><a href="index.html#services"><span class="red">start your project</span></a></span></p>
+            </div>
+        </section>
+        <section id="settings">
+            <button id="favoriteBtn" class="show">My Favorites</button>
+            <div class="Favorites-cotainer">
+                <p>You donot have favorite projects until now </p>
+            </div>
+            <a href="chat.html" class="messages">My Messages</a>
+        </section>
+        <button id="logOut">Log out</button>
+    </main>
+    <script src="./js/dashboard.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dashboard|Forixa</title>
+        <meta name="description"
+            content="Manage your projects, purchased services, favorites, and account information from your personalized FORIXA dashboard.">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ##### FONT awesome #### -->
+        <link rel="stylesheet" href="css/adminDashboard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" alt="out website logo">
+            <h1>Admin Dashboard</h1>
+
+        </header>
+        <main>
+        <h2>projects</h2>
+        <section class="cards">
+            <div class="card">
+                <h3>Projects</h3>
+                <p id="projectsCount">0</p>
+            </div>
+            
+            <div class="card">
+                <h3>Clients</h3>
+                <p id="clientsCount">0</p>
+            </div>
+            
+            <div class="card">
+                <h3>Marketers</h3>
+                <p id="marketersCount">0</p>
+            </div>
+            
+            <div class="card">
+                <h3>Revenue</h3>
+                <p id="revenue">$0</p>
+            </div>
+        </section>
+        <h2>projects</h2>
+        <table id="projects">
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Client</th>
+                    <th>Marketer</th>
+                    <th>Status</th>
+                    <th>Price<th>
+                </tr>
+            </thead>
+            <tbody id="projectsBody">
+            </tbody>
+        </table>
+            <h2>Marketers</h2>
+            <table id="Marketers">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Ref-Code</td>
+                        <td>Visitors</td>
+                        <td>Sales</td>
+                        <td>Points</td>
+                        <td>Price</td>
+                        <td>Balance</td>
+                    </tr>
+                </thead>
+                <tbody id="marketersBody">
+                </tbody>
+            </table>
+
+        </main>
+        <script src="./js/adminDashboard.js" type="module"></script>
+    </body>
+</html>

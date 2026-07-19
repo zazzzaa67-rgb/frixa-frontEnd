@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up|Forixa</title>
+    <meta name="description"
+    content="Create your FORIXA account to start building websites, AI solutions, APIs, and modern software projects.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ##### FONT awesome #### -->
+    <link rel="stylesheet" href="css/log.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <img src="images/logo.png" alt="forixa logo" class="logo">
+        <p>We build digital solutions that drive real results.</p>
+        <h1>Create your<span class="red wel"> acount (Marketer)</span></h1>
+        <form id="signUp-form">
+            <div class="container">
+                <label for="fullName" class="lab" >Full Name</label>
+                <input name="fullName" type="text" placeholder="Your full name" id="fullName" required>
+            </div>
+            <div class="container">
+                <lable for="email" class="lab">Email</lable>
+                <input type="email" placeholder="you@email.com" id="email" name="email" required>
+            </div>
+            <div class="container">
+                <lable for="password" class="lab">Password</lable>
+                <input type="password" placeholder="1234" id="password" name="password" required>
+            </div>
+            <button type="submit" id="signUp">Sign up</button>
+        </form>
+        <p>Already have account ? <a href="logIn.html"><span class="red">Login</span></a></p>
+    </main>
+    <script src="./js/signup.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/log.css">
+    <title>Log in | Forixa</title>
+    <meta name="description"
+        content="Sign in to your FORIXA account to access your projects, services, and AI-powered workspace.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ##### FONT awesome #### -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <img src="images/logo.png" alt="forixa logo" class="logo">
+        <p>We build digital solutions that drive real results.</p>
+        <h1>Welcome <span class="red wel">Admin!!!</span></h1>
+        <p>log in your acount to continue</p>
+        <form id="logIn-form">
+            <div class='container'>
+                <label for="email" class="lab">Email</label>
+                <input type="email" placeholder="you@email.com" id="email" name="email" required>
+            </div>
+            <div class="container">
+                <label for="password" class="lab">Password</lable>
+                <input type="password" placeholder="1234" id="password" name="password" required>
+            </div>
+            <button type="submit" id="logIn">Login</button>
+        </form>
+    </main>
+    <script src="./js/adminLogin.js" type="module"></script>
+</body>
+</html>

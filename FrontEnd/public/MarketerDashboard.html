@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard|Forixa</title>
+    <meta name="description"
+        content="Manage your projects, purchased services, favorites, and account information from your personalized FORIXA dashboard.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ##### FONT awesome #### -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <i id="bars" class="fa-solid fa-bars"></i>
+        <nav>
+            <img src="./images/logo.png" class="nav-logo">
+            <a href="index.html">Face Book</a>
+            <a href="index.html#services">Linked in</a>
+            <a href="chat.html">Contact Us</a>
+            <a href="Dashboard.html">Twitter</a>
+
+        </nav>
+        <img src="images/logo.png" alt="Forixa logo" class="logo">
+        <i id="bell" class="fa-regular fa-bell"></i>
+    </header>
+
+    <main>
+        <section id="usInfo" class="marketerInfo">
+            <div class="marEmail">
+                <img src="images/avatar.png" alt="user avatar " id="avatar">
+                <div class="InfoCon">
+                    <h1 id="marName">Marketer Name</h1>
+                    <p id="marEmail">myEmail@.com</p>
+                    <button class="user" id="marketer">Marketer</button>
+                </div>
+            </div>
+            <div class="refCon">
+                <h2>Your Referral Code</h2>
+            
+                <p id="refCodeText">ABC12345</p>
+            
+                <button id="copyLinkBtn">
+                    Copy
+                </button>
+            </div>
+        </section>
+
+        <section id="overView" class="marSales">
+            <h2>Marketing Overview</h2>
+            <div class="usprojectsCon marProjects" >
+                <div>
+                    <p class="num num1 " id="visitors">0</p>
+                    <p class="red">Visitors</p>
+                </div>
+                <div>
+                    <p class="num num2" id="sales">0</p>
+                    <p class="red">Sales</p>
+                </div>
+                <div>
+                    <p class="num num3" id="balance">$0</p>
+                    <p class="red">Balance</p>
+                </div>
+                <div>
+                    <p class="num num3" id="points">0</p>
+                    <p class="red">Points</p>
+                </div>
+            </div>
+        </section>
+        <section id="usProjects">
+            <div class="container">
+                <h2>Recent Referrals</h2>
+                <button>View all</button>
+            </div>
+            <div class="usProjectsCon" id="recentProjects">
+                <p>Loading....</p>
+            </div>
+        </section>
+        <section id="settings">
+            <a href="leaderboard.html">
+                <button class="show">
+                    🏆 Leaderboard
+                </button>
+            </a>
+            <div class="Favorites-cotainer">
+                <p>You donot have favorite projects until now </p>
+            </div>
+            <button class="messages" >Copy Referral Link</button>
+        </section>
+        <button id="logOut">Log out</button>
+    </main>
+    <script src="./js/marDashboard.js" type="module"></script>
+</body>
+</html>

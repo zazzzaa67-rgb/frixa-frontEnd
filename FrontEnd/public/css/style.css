@@ -1,0 +1,499 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:"Source Sans 3", sans-serif;
+    background-color: #1c1c1c;
+    color : #ffffff;
+}
+#home , 
+header .intro, 
+#services , 
+#why-forixa ,
+#porjects,
+#faq,
+footer,
+form{
+    padding : 0 .4rem;
+    display : flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: .8rem;
+}
+header .intro{
+    width : 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap : 0;
+    
+}
+.logo{
+    width : 65%; 
+    margin :0rem auto;
+    height: 4rem;
+
+}
+.signCon{
+    display : none;
+    position: absolute;
+    width : 60%;
+    margin : 0 ;
+    gap : 1rem;
+    flex-direction: column;
+    background-color: #2A2A2A;
+    padding: 1rem 1.5rem; 
+    align-items: center;
+    top : 3rem ; 
+    left: 1.5rem;
+    border-radius: 2px;
+}
+.sign{
+    width : 95%; 
+    padding: .7rem 1rem ;
+    border-radius: 4px;
+    background-color: #fc3f37;
+    font-weight: 600;
+    color : #ffffff;
+    cursor: pointer;
+    border : none;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    transition: background-color .5s, border-color .5s;
+    text-decoration: none;
+    text-align: center;
+}
+.sign:hover ,
+.sing:active{
+    background-color: #f05751;
+    border: solid 2px #ffffff;
+}
+
+.bars{
+    margin-left: .4rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+h1{
+    margin-top: 5px;
+    line-height: 1.9rem;
+    margin-bottom: 5px;
+}
+#build{
+    display: inline-block;
+    margin-bottom: 0;
+}
+.content span{
+    font-size: 1.5rem;
+}
+.content p , .explain{
+    display: block;
+    width : 95%; 
+    line-height: 1.2rem;
+    font-weight: 500;
+
+}
+.red{
+    color :#fc3f37;
+}
+.start {
+    background-color:#fc3f37;
+    text-decoration: none;
+    font-weight: 600;
+    color : #ffffff;
+    padding : .2rem .4rem ; 
+    border-radius: 2px;
+    transition: all .5s;
+}
+.photo {
+    width: 90%;
+    max-width: 32.25rem;
+    margin: .4rem auto;
+}
+.tool{
+    font-size: 1.7rem;
+    margin: 0 .3rem;
+}
+.toolsWrapper {
+    width: 100%;
+    overflow: hidden;
+    margin: 40px 0;
+    background-color: #000000;
+}
+.toolsLine {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    animation: scrollTools 18s linear infinite;
+}
+.tool {
+    white-space: nowrap;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    flex-shrink: 0;
+    transition: .3s;
+}
+.tool:hover{
+    transform: scale(1.08);
+}
+.toolsLine:hover {
+    animation-play-state: paused;
+}
+@keyframes scrollTools {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.green{
+    color:#0dbd0d;
+}
+.blue{
+    color: #4b4be7
+}
+.yellow{
+    color : yellow;
+}
+.black{
+    color : brown;
+}
+.whiteBlue{
+    color : rgb(22, 129, 237);
+}
+.sky{
+    color : rgb(8, 226, 242)
+}
+.pirple{
+    color : palevioletred;
+}
+h2 , h3{
+    display: block;
+    font-size: 2rem;
+    margin-bottom: .2rem;
+    margin:.2rem auto ;
+}
+.explain{
+    margin: 0 auto;
+    font-weight: 600;
+
+}
+.service , .question{
+    background-color: #2A2A2A;
+    width : 90%;
+    max-width: 26rem; 
+    margin: 1rem auto;
+    padding : 1.2rem 1.6rem ;
+    border-radius: 2px; 
+}
+.question{
+    transition: all .5 ease;
+}
+.question:hover{
+    box-shadow: 1px 1px 15rem #fc3f37;
+}
+.servicesCon .addBtn{
+    display: block;
+    background-color: #fc3f37;
+    color : #ffffff;
+    padding : .6rem .8rem; 
+    cursor:pointer;
+    border-radius: 2px; 
+    font-weight: 600;
+    text-align: center;
+    max-height: 12.5rem;
+    transition: all .5s ;
+    width: 70%;
+}
+.addBtn:hover , .addBtn:active , .start:hover {
+    box-shadow: 1px 1px 15px greenyellow;
+    background-color: #f05751;
+}
+
+.service p , .whyContainer p{
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+.why{
+    margin-bottom:0;
+}
+#why-forixa , .toolsLine{
+    background-color: #000000;
+    margin-top: 2rem;
+    text-align: center;
+    width : 100%;
+    padding: .8rem .8rem;
+}
+main{
+    width : 100%; 
+}
+#why-forixa .container{
+    display: flex;
+    gap : 1.5rem ;
+}
+h4{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.forixa-photo{
+    width : 90%;
+    margin : .9rem 
+}
+#projects , #services .explain{
+    text-align: center;
+    
+    
+}
+.project{
+    width : 100%;
+    text-align: center;
+}
+.project p , .selec , footer p {
+    font-weight: 600;
+    margin: 0 auto;
+    margin-bottom: .8rem;
+    margin: 0;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.liveDemo{
+    display: block;
+    margin : .4rem auto;
+    width : 90%;
+    max-width: 27rem; 
+    background-color: #fc3f37;
+    padding: .6rem .8rem;
+    margin-top: 1rem;
+    font-weight: 600; 
+    border-radius: 3px;  
+}
+.liveDemo:hover,
+.liveDemo:active {
+    background-color: #f05751;
+}
+
+#faq{
+    text-align: center;
+}
+.map{
+    display: none;
+}
+.dot{
+    position: absolute;
+    width : 1rem ;
+    height:1rem ;
+    border-radius: 50%;
+    background-color: #fc3f37;
+}
+.dot1{
+    top:15%;
+    right: 16%;
+    animation-delay: 0s;
+
+}
+.dot2{
+    top: 10%; 
+    left: 15%;
+    animation-delay: .6s;
+
+}
+.dot3{
+    bottom: 9%;
+    right: 10%;
+    animation-delay: 1.2s;
+}
+.dot4{
+    background-color: #ffffff;
+    left : 10%;
+    bottom: 10%;
+    animation-delay: 1.8s;
+}
+.dot {
+    position: absolute;
+    border-radius: 50%;
+    animation: floating 4s ease-in-out infinite;
+}
+.dot5 {
+    animation-delay: 2.4s;
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+.question{
+    position: relative;
+}
+.logo2{
+    display :block;
+    width : 90%;
+    height: 4rem;
+}
+.social{
+    display: flex;
+    gap: 4.8rem;
+    margin: 1rem auto;
+    margin-top: 1rem;
+    justify-content: center;
+    font-size: 1.5rem;   
+}
+.social a{
+    color : #fc3f37 ;
+}
+.linksCon{
+    display : none;
+}
+footer{
+    background-color: #000000;
+}
+.service a{
+    text-decoration: none;
+}
+
+@media(min-width:700px){
+    h1{
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    #introCon{
+        width : 100%;
+        display:flex;
+        align-items: center;
+        justify-content:space-between;
+        
+    }
+    #why-forixa{
+        width: 100%;
+    }
+    .intro .bars{
+        display: none;
+    }
+    .tool{
+        font-size: 2.5rem;
+    }
+    .photo{
+        width : 50%;
+    }
+    .signCon{
+        position:static;
+        display: flex;
+        flex-direction: row;
+        gap : 2rem;
+        width: 40%;
+        background-color: #1c1c1c;
+    }
+    .sign{
+        width : 250px; 
+
+    }
+    #home .intro{
+        display: flex;
+        gap: 1rem; 
+        padding: 0;
+    }
+    .logo{
+        height: 100px;
+        margin-left: 0;
+        max-width: 25rem;
+    }
+    #introCon{
+        justify-content: space-between;
+    }
+    body #home{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #introCon .content{
+        margin-left:2em ;
+        width: 50%;
+    }
+    .servicesCon{
+        display: grid;
+        grid-template-columns: repeat(3 , auto);
+        
+    }
+    #why-forixa{
+        font-size:1.2rem ;
+    }
+    #why-forixa .container{
+        gap : 10rem; 
+    }
+    .project{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap : 0; 
+        width : 100%;
+        border-bottom: solid 2px red ;
+    }
+    .forixa-photo{
+        width : 50%; 
+    }
+    .questions{
+        display: grid;
+        grid-template-columns: repeat(2 , auto);
+    }
+    .linksCon{
+        display : flex;
+        flex-direction: column;
+
+        width: 35%;
+    }
+    footer{
+        display : flex;
+        flex-direction: row;
+        background-color: #000000;
+    }
+    footer .container p  {
+        width : 80%; 
+        margin-left: .6em;
+        
+    }
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;  
+        text-align: left;            
+    }  
+    .social{
+        width : 100%;
+        justify-content: flex-start;
+        margin-left:1.2em ;
+    }  
+    .linksCon a{
+        text-decoration: none;
+        font-size: 1.1rem;
+        color :#ffffff;
+    }
+    .start{
+        display: block;
+        padding : .8rem 1rem;
+        margin-top: 1rem;
+        width: 25%;
+        min-width: 200px;
+    }
+}
+
