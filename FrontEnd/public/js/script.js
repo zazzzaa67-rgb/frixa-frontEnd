@@ -11,7 +11,7 @@ const includes = document.getElementById('includes')
 const params = new  URLSearchParams(window.location.search)
 const id = Number(params.get('id'))
 const service = services.find((e)=>{return e.id == id})    
-time.textContent =service.delivery
+// time.textContent =service.delivery
 title.textContent = service.title
 description.textContent = service.description
 startBtn.textContent = service.button
