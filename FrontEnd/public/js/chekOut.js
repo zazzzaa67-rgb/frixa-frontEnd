@@ -15,4 +15,5 @@ payBtn.addEventListener('click' ,async ()=>{
     console.log("FULL RESPONSE:");    
     console.log(data);
     alert(JSON.stringify(data));
+    window.location.href = data.checkoutUrl
 })
