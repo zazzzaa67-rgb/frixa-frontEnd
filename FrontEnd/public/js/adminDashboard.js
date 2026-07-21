@@ -137,7 +137,6 @@ window.saveProject = async function(id){
         },
         body:JSON.stringify({price})
     });
-
     await fetch(`http://localhost:5000/api/projects/${id}/status`,{
         method:"PUT",
         headers:{
@@ -146,9 +145,7 @@ window.saveProject = async function(id){
         },
         body:JSON.stringify({status})
     });
-
     alert("Saved Successfully");
-
     loadProjects();
     loadStats();
     loadMarketers();

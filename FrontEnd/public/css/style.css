@@ -198,6 +198,9 @@ h2 , h3{
     padding : 1.2rem 1.6rem ;
     border-radius: 2px; 
 }
+.btn2{
+    margin-top: 3.2rem;
+}
 .question{
     transition: all .5 ease;
 }

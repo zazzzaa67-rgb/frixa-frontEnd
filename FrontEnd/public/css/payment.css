@@ -1,0 +1,92 @@
+*::after , *::before ,*{
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding : .5rem; 
+    background-color: #1c1c1c;
+    color : #ffffff;
+    font-family: "Source Sans 3",sans-serif;;
+}
+h1{
+    margin-block: 0;
+}
+.price {
+    border : solid 3px #fc3f37;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 4px;
+}
+
+.red{
+    color : #fc3f37;
+}
+#advantgsCon{
+    display : flex;
+    flex-direction: column;
+    gap : .5rem; 
+}
+#advantgsCon .container{
+    border: solid 2px #fc3f37;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-block: .5rem;
+}
+.white{
+    font-weight: 700;
+}
+.info{
+    text-align: left;
+}
+h3{
+    font-size: 1.8rem;
+}
+#pay{
+    display: block;
+    margin: .2rem auto;
+    padding : .5rem .7rem; 
+    border: none;
+    border-radius: 3px;
+    background-color: #fc3f37;
+    color : #ffffff;
+    font-weight: 600;
+    transition: all .5s;
+    width: 100%;
+    cursor: pointer;
+}
+#pay:hover{
+    box-shadow: 1px 1px 15px greenyellow;
+}
+main{
+    width: 100%;
+}
+@media(min-width: 620px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%; 
+        gap : 8rem ;
+    }
+    .price{
+        width: 30%; 
+    }
+    #advantgsCon{
+        flex-direction: row;
+        gap : 3rem; 
+        margin-block: .7rem;
+    }
+    #advantgsCon .container{
+        width: 27%; 
+    }
+    #pay{
+        width: 50%; 
+        margin-left: 0;
+        padding-block: 1rem;
+        margin-top: 2rem;
+    }
+}

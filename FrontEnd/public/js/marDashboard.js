@@ -101,7 +101,7 @@ async function loadRecentProjects() {
 document.getElementById("copyLinkBtn").addEventListener("click", () => {
     const ref = document.getElementById("refCodeText").textContent;
     const link =
-    `${window.location.origin}/FrontEnd/public/details.html?ref=${ref}`;
+    `${window.location.origin}/forixa-frontEnd/FrontEnd/public/index.html?ref=${ref}`;
     navigator.clipboard.writeText(link);
     const btn = document.getElementById("copyLinkBtn");
     btn.textContent = "Copied ✅";

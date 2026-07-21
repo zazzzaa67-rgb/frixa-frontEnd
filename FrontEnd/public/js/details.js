@@ -4,41 +4,13 @@ import {projectSteps} from './data.js'
 const form = document.getElementById("projectForm")
 let num=0
 let UserProjectData = {}
+const refCode = localStorage.getItem("refCode");
 renderForm()
-const refCode = new URLSearchParams(window.location.search).get("ref");
-console.log("refCode =", refCode);
-console.log("visitorCounted =", sessionStorage.getItem("visitorCounted"));
-if (
-    refCode &&
-    !sessionStorage.getItem("visitorCounted")
-) {
-    console.log("FETCH IS RUNNING");
-    fetch("http://localhost:5000/api/auth/visitor", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ refCode })
-    })
-    .then(async res => {
-        console.log("Status:", res.status);
-        console.log(await res.json());
-    })
-    .catch(err => console.error(err));
-
-    sessionStorage.setItem(
-        "visitorCounted",
-        "true"
-    );
-
-}
 function renderQuestion(question) {
-
     if (question.type === "text" ||
         question.type === "email" ||
         question.type === "url" ||
         question.type === "tel") {
-
         return `
             <div>
                 <label for="${question.id}">${question.label}</label>
@@ -58,16 +30,15 @@ function renderQuestion(question) {
                 <textarea
                     name ='${question.id}'
                     id="${question.id}"
-                    placeholder="${question.placeholder}" required></textarea>
+                    placeholder="${question.placeholder}" required>
+                </textarea>
             </div>
         `;
     }
-
     if (question.type === "select") {
         return `
             <div>
                 <label for="${question.id}">${question.label}</label>
-
                 <select id="${question.id}" name='${question.id}'  required>
                     <option value="" selected disabled>
                         Select an option
@@ -79,7 +50,6 @@ function renderQuestion(question) {
             </div>
         `;
     }
-
     if (question.type === "radio") {
         return `
             <div>
@@ -93,17 +63,13 @@ function renderQuestion(question) {
             </div>
         `;
     }
-
-
 }
 function renderForm(){
     form.innerHTML = `
         <h2>${projectSteps[num].title}</h2>
-
         ${projectSteps[num].questions
             .map(renderQuestion)
             .join("")}
-
         <button id="next" class="btn">
             ${num === projectSteps.length - 1 ? "Submit" : "Next"}
         </button>
@@ -115,16 +81,15 @@ form.addEventListener("submit", async (e) => {
     UserProjectData = {
         ...UserProjectData,
         ...projectData,
-        refCode : new URLSearchParams(window.location.search).get('ref')
+        refCode : localStorage.getItem("refCode")
     }
     document.querySelector(`.step${num}`).style.backgroundColor = 'red'
     if (num < projectSteps.length - 1) {
         num++;
         renderForm();
-    }
-        else {
+    }else {
             console.log("URL =", window.location.search);
-            const refCode = new URLSearchParams(window.location.search).get("ref");
+            const refCode = localStorage.getItem("refCode");
             console.log("RefCode =", refCode);
             const result = await submitProject(UserProjectData)
             console.log(result)
