@@ -1,10 +1,23 @@
-<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<!DOCTYPE html>
+<html>
 
-<script type="module">
-    const tokenRes = await fetch("http://localhost:5000/api/payment/token");
-    const { clientToken } = await tokenRes.json();
+<head>
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+</head>
 
-    Paddle.Initialize({
-        token: clientToken
-    });
-</script>
+<body>
+
+    <h2>Loading Checkout...</h2>
+
+    <script type="module">
+        const tokenRes = await fetch("http://localhost:5000/api/payment/token");
+        const { clientToken } = await tokenRes.json();
+
+        Paddle.Initialize({
+            token: clientToken
+        });
+    </script>
+
+</body>
+
+</html>
