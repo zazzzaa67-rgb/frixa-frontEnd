@@ -11,10 +11,6 @@ payBtn.addEventListener('click' ,async ()=>{
         body: JSON.stringify({"projectId": 1}),
     })
     const data = await res.json()
-    console.log(data.transactionId)
-    if (data.transactionId ) {
-        Paddle.Checkout.open({
-            transactionId: data.transactionId
-        });
-    }
+    console.log(transaction.checkout.url)
+    window.location.href = data.checkoutUrl;
 })
