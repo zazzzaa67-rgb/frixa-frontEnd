@@ -11,5 +11,8 @@ payBtn.addEventListener('click' ,async ()=>{
         body: JSON.stringify({"projectId": 1}),
     })
     const data = await res.json()
-    window.location.href = data.checkoutUrl;
+
+    console.log("FULL RESPONSE:");    
+    console.log(data);
+    alert(JSON.stringify(data));
 })
