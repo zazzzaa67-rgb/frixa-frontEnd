@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 </head>
-
 <body>
-
     <h2>Loading Checkout...</h2>
-
     <script type="module">
         const tokenRes = await fetch("http://localhost:5000/api/payment/token");
         const { clientToken } = await tokenRes.json();
-
         Paddle.Initialize({
             token: clientToken
         });
+        const params = new URLSearchParams(window.location.search);
+        const transactionId = params.get("_ptxn");
+        console.log(transactionId);
+        if (transactionId) {
+            Paddle.Checkout.open({
+                transactionId: transactionId
+            });
+        }
     </script>
-
 </body>
-
 </html>
