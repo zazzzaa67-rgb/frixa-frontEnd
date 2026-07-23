@@ -3,7 +3,7 @@ async function loadProfile() {
 
     try {
         console.log("TOKEN IN DASHBOARD:", localStorage.getItem("token"));
-        const response = await fetch("http://forixa-backend-production.up.railway.app/api/auth/profile",
+        const response = await fetch("https://forixa-backend-production.up.railway.app/api/auth/profile",
         {
             method: 'GET',
             headers: {
@@ -54,7 +54,7 @@ async function loadRecentProjects() {
     const token = localStorage.getItem("token");
 
     const res = await fetch(
-        "http://forixa-backend-production.up.railway.app/api/projects/my-projects",
+        "https://forixa-backend-production.up.railway.app/api/projects/my-projects",
         {
             headers:{
                 Authorization:`Bearer ${token}`

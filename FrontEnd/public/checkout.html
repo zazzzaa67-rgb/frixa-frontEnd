@@ -6,7 +6,7 @@
 <body>
     <h2>Loading Checkout...</h2>
     <script type="module">
-        const tokenRes = await fetch("http://forixa-backend-production.up.railway.app/api/payment/token");
+        const tokenRes = await fetch("https://forixa-backend-production.up.railway.app/api/payment/token");
         const { clientToken } = await tokenRes.json();
         Paddle.Initialize({
             token: clientToken

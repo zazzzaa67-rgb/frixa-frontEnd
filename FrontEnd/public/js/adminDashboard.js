@@ -10,18 +10,15 @@ if (!token) {
 async function loadStats() {
 
     const res = await fetch(
-        "http://forixa-backend-production.up.railway.app/api/projects/dashboard/stats",
+        "https://forixa-backend-production.up.railway.app/api/projects/dashboard/stats",
         {
             headers: {
                 Authorization: `Bearer ${token}`
             }
         }
     );
-
     const stats = await res.json();
-
     console.log(stats);
-
     document.getElementById("projectsCount").textContent =
         stats.totalProjects;
 
@@ -43,7 +40,7 @@ async function loadStats() {
 async function loadProjects() {
 
     const res = await fetch(
-        "http://forixa-backend-production.up.railway.app/api/projects",
+        "https://forixa-backend-production.up.railway.app/api/projects",
         {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -94,7 +91,7 @@ async function loadProjects() {
 async function loadMarketers() {
 
     const res = await fetch(
-        "http://forixa-backend-production.up.railway.app/api/projects/marketers",
+        "https://forixa-backend-production.up.railway.app/api/projects/marketers",
         {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -125,7 +122,7 @@ window.saveProject = async function(id){
         document.getElementById(`price-${id}`).value;
     const status =
         document.getElementById(`status-${id}`).value;
-    await fetch(`http://forixa-backend-production.up.railway.app/api/projects/${id}/price`,{
+    await fetch(`https://forixa-backend-production.up.railway.app/api/projects/${id}/price`,{
         method:"PUT",
         headers:{
             "Content-Type":"application/json",
@@ -133,7 +130,7 @@ window.saveProject = async function(id){
         },
         body:JSON.stringify({price})
     });
-    await fetch(`http://forixa-backend-production.up.railway.app/api/projects/${id}/status`,{
+    await fetch(`https://forixa-backend-production.up.railway.app/api/projects/${id}/status`,{
         method:"PUT",
         headers:{
             "Content-Type":"application/json",
