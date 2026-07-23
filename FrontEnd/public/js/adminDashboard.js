@@ -3,10 +3,6 @@ if (!token) {
     window.location.href = "adminLogin.html";
 }
 
-// ====================
-// Dashboard Cards
-// ====================
-
 async function loadStats() {
 
     const res = await fetch(
