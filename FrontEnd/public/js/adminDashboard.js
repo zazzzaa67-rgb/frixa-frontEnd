@@ -52,6 +52,7 @@ async function loadProjects() {
     );
     const projects = await res.json();
     console.log("Projects:", projects);
+
     const body = document.getElementById("projectsBody");
     body.innerHTML = "";
     projects.forEach(project => {
@@ -82,7 +83,8 @@ async function loadProjects() {
                         Save
                     </button>
                 </td>
-                
+                <td>${project.phone}</td>
+                <td>${project.email}</td>
             </tr>
         `;
     });
@@ -99,36 +101,30 @@ async function loadMarketers() {
             }
         }
     );
-
     const marketers = await res.json();
     console.log(marketers)
-
     const body = document.getElementById("marketersBody");
-
     body.innerHTML = "";
-
     marketers.forEach(marketer => {
-
         body.innerHTML += `
         <tr>
+            <td>${marketer.id}
             <td>${marketer.full_name}</td>
             <td>${marketer.ref_code}</td>
             <td>${marketer.visitors}</td>
             <td>${marketer.sales}</td>
             <td>${marketer.points}</td>
             <td>${marketer.balance}$</td>
+            <td>${marketer.email}</td>
         </tr>
         `;
     });
 }
 window.saveProject = async function(id){
-
     const price =
         document.getElementById(`price-${id}`).value;
-
     const status =
         document.getElementById(`status-${id}`).value;
-
     await fetch(`http://localhost:5000/api/projects/${id}/price`,{
         method:"PUT",
         headers:{
