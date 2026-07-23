@@ -6,7 +6,7 @@ form.addEventListener('submit' , async(e) =>{
         password : document.getElementById("password").value
     }
     const res = await fetch(
-        "http://localhost:5000/api/admin/login",{
+        "http://forixa-backend-production.up.railway.app/api/admin/login",{
             method: 'POST',
             headers : {'Content-Type' : 'application/json'},
             body : JSON.stringify(data)

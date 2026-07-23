@@ -8,7 +8,7 @@ if (
     savedRef &&
     !sessionStorage.getItem("visitorCounted")
 ) {
-    fetch("http://localhost:5000/api/auth/visitor", {
+    fetch("http://forixa-backend-production.up.railway.app/api/auth/visitor", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

@@ -5,7 +5,7 @@ form.addEventListener("submit", async (e) => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
     try {
-        const response = await fetch("http://localhost:5000/api/auth/marketer", {
+        const response = await fetch("http://forixa-backend-production.up.railway.app/api/auth/marketer", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

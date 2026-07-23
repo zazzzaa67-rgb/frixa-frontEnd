@@ -1,11 +1,11 @@
 const payBtn = document.getElementById("pay")
-const tokenRes = await fetch("http://localhost:5000/api/payment/token");
+const tokenRes = await fetch("http://forixa-backend-production.up.railway.app/api/payment/token");
 const { clientToken } = await tokenRes.json();
     Paddle.Initialize({
         token: clientToken
     });
 payBtn.addEventListener('click' ,async ()=>{
-    const res = await fetch('http://localhost:5000/api/payment/checkout' , {
+    const res = await fetch('http://forixa-backend-production.up.railway.app/api/payment/checkout' , {
         method: 'POST',
         headers : {'Content-Type' : 'application/json'},
         body: JSON.stringify({"projectId": 1}),

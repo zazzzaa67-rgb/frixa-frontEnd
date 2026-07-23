@@ -10,7 +10,7 @@ if (!token) {
 async function loadStats() {
 
     const res = await fetch(
-        "http://localhost:5000/api/projects/dashboard/stats",
+        "http://forixa-backend-production.up.railway.app/api/projects/dashboard/stats",
         {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -43,7 +43,7 @@ async function loadStats() {
 async function loadProjects() {
 
     const res = await fetch(
-        "http://localhost:5000/api/projects",
+        "http://forixa-backend-production.up.railway.app/api/projects",
         {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -94,7 +94,7 @@ async function loadProjects() {
 async function loadMarketers() {
 
     const res = await fetch(
-        "http://localhost:5000/api/projects/marketers",
+        "http://forixa-backend-production.up.railway.app/api/projects/marketers",
         {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -125,7 +125,7 @@ window.saveProject = async function(id){
         document.getElementById(`price-${id}`).value;
     const status =
         document.getElementById(`status-${id}`).value;
-    await fetch(`http://localhost:5000/api/projects/${id}/price`,{
+    await fetch(`http://forixa-backend-production.up.railway.app/api/projects/${id}/price`,{
         method:"PUT",
         headers:{
             "Content-Type":"application/json",
@@ -133,7 +133,7 @@ window.saveProject = async function(id){
         },
         body:JSON.stringify({price})
     });
-    await fetch(`http://localhost:5000/api/projects/${id}/status`,{
+    await fetch(`http://forixa-backend-production.up.railway.app/api/projects/${id}/status`,{
         method:"PUT",
         headers:{
             "Content-Type":"application/json",

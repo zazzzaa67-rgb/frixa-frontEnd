@@ -1,5 +1,5 @@
 export async function submitProject(data){
-    const res = await fetch('http://localhost:5000/api/projects' , {
+    const res = await fetch('http://forixa-backend-production.up.railway.app/api/projects' , {
         method:"POST",
         headers:{"Content-Type":'application/json'},
         body : JSON.stringify(data)
