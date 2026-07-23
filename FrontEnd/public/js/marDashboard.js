@@ -14,7 +14,7 @@ async function loadProfile() {
         console.log("after fetch");
         console.log(response.status)
         if (!response.ok) {
-            window.location.href = "login.html";
+            window.location.href = "logIn.html";
             return;
         }
         const marketer = await response.json();
