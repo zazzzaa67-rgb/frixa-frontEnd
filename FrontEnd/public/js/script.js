@@ -15,7 +15,7 @@ time.textContent =service.delivery
 title.textContent = service.title
 description.textContent = service.description
 startBtn.textContent = service.button
-price.textContent = `Starts from ${service.price}`
+price.textContent = `Starts from $${service.price}`
 includes.innerHTML = service.includes
     .map(item => `
         
