@@ -13,7 +13,6 @@
         });
         const params = new URLSearchParams(window.location.search);
         const transactionId = params.get("_ptxn");
-        console.log(transactionId);
         if (transactionId) {
             Paddle.Checkout.open({
                 transactionId: transactionId
