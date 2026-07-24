@@ -27,6 +27,10 @@ header{
     gap : 2rem ;
 
 }
+#introb a{
+    text-decoration: none;
+    color : #ffffff;
+}
 #avatar{
     width : 7rem ; 
     height: 7rem;
