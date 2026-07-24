@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pricing | FORIXA</title>
+
+    <link rel="stylesheet" href="css/legal.css">
+    <style>       
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .price-card {
+            background: #181d28;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #292d37;
+            transition: .3s;
+        }
+        .price-card:hover {
+            transform: translateY(-8px);
+            border-color: #fc3f37;
+        }
+        .price {
+            font-size: 35px;
+            color: #fc3f37;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        button {
+            background: #fc3f37;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        button:hover {
+            opacity: .9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pricing</h1>
+        <p>Professional Software Development Services</p>
+    </header>
+    <div class="container">
+        <div class="grid">
+            <div class="price-card">
+                <h2>Landing Page</h2>
+                <div class="price">$100+</div>
+                <p>Modern responsive landing page.</p>
+            </div>
+            <div class="price-card">
+                <h2>Business Website</h2>
+                <div class="price">$300+</div>
+                <p>Professional multi-page website.</p>
+            </div>
+            <div class="price-card">
+                <h2>AI Chatbot</h2>
+                <div class="price">Custom Quote</div>
+                <p>AI chatbot with business integrations.</p>
+            </div>
+            <div class="price-card">
+                <h2>Custom Web App</h2>
+                <div class="price">Custom Quote</div>
+                <p>Full-stack applications built for your business.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2026 FORIXA. All Rights Reserved.
+    </footer>
+</body>
+</html>
