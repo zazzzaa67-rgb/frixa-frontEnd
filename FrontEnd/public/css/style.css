@@ -377,7 +377,7 @@ footer{
 .service a{
     text-decoration: none;
 }
-#aiChatbot {
+/* #aiChatbot {
     position: fixed;
     bottom: 6.5rem;
     left: 1rem;
@@ -467,7 +467,7 @@ form {
     padding: .8rem .6rem ; 
     border-radius: 2px;
     border :none;
-}
+} */
 @media(min-width:700px){
     h1{
         font-size: 2.5rem;

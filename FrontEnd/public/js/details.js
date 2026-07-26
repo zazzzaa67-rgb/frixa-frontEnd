@@ -56,8 +56,8 @@ function renderQuestion(question) {
                 <label>${question.label}</label>
                 ${question.options.map(option => `
                     <label>
-                        <input type="radio"  value="${option}" name="${question.id}" required>
                         ${option}
+                        <input type="radio"  value="${option}" name="${question.id}" required>
                     </label>
                 `).join("")}
             </div>
