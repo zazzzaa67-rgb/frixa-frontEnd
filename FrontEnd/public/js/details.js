@@ -28,6 +28,7 @@ function renderQuestion(question) {
             <div>
                 <label for="${question.id}">${question.label}</label>
                 <textarea
+                    class='require'
                     name ='${question.id}'
                     id="${question.id}"
                     placeholder="${question.placeholder}" required>
@@ -55,7 +56,7 @@ function renderQuestion(question) {
             <div>
                 <label>${question.label}</label>
                 ${question.options.map(option => `
-                    <label>
+                    <label class="radio-option">
                         ${option}
                         <input type="radio"  value="${option}" name="${question.id}" required>
                     </label>

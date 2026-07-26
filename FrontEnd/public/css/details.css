@@ -23,7 +23,17 @@ body{
 #projectInfo{
     position: relative;
 }
-
+.require , #requirements{
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    resize: vertical;
+    text-align: left;
+    vertical-align: top;
+    box-sizing: border-box;
+    align-items: flex-start;
+    background-color: #3A3A3A;
+}
 form div{
     width: 100%;
     display: flex;
@@ -116,6 +126,12 @@ form select{
     text-decoration: none;
     color : #ffffff;
     font-size: 1.3rem;
+}
+.radio-option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 @media(min-width: 800px ){
     #next{
