@@ -18,9 +18,7 @@ startBtn.textContent = service.button
 price.textContent = `Starts from $${service.price}`
 includes.innerHTML = service.includes
     .map(item => `
-        
         <p><span class="red"><i class="fa-solid fa-check"></i></span> ${item}</p>
-        
     `)
     .join("");
 
