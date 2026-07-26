@@ -23,7 +23,7 @@ body{
 #projectInfo{
     position: relative;
 }
-.require , #requirements{
+.require , #userRequirements{
     width: 100%;
     min-height: 100px;
     padding: 12px;

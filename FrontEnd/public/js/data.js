@@ -174,7 +174,7 @@ export const projectSteps = [
                 ]
             },
             {
-                id: "requirements",
+                id: "userRequirements",
                 label: "Any special requirements?",
                 type: "textarea",
                 placeholder: "Tell us about any specific features or ideas..."
