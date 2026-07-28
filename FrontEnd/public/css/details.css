@@ -29,6 +29,7 @@ body{
     padding: 12px;
     resize: vertical;
     text-align: left;
+    direction: ltr;
     vertical-align: top;
     box-sizing: border-box;
     align-items: flex-start;
