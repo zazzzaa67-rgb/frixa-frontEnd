@@ -39,6 +39,7 @@ header .intro a{
     text-decoration: none;
     color :#ffffff;
 }
+
 .logo{
     width : 65%; 
     margin :0rem auto;
@@ -105,6 +106,10 @@ h1{
     font-weight: 500;
 
 }
+.content p ,.explain{
+    max-width: 26rem;
+    line-height: 23px;
+}
 .red{
     color :#fc3f37;
 }
@@ -115,7 +120,11 @@ h1{
     color : #ffffff;
     padding : .2rem .4rem ; 
     border-radius: 2px;
-    transition: all .5s;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.start:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(252, 63, 55, 0.35);
 }
 .photo {
     width: 90%;
@@ -145,9 +154,11 @@ h1{
     font-weight: bold;
     flex-shrink: 0;
     transition: .3s;
+    color:#A1A1AA;
 }
 .tool:hover{
     transform: scale(1.08);
+    color : #f05751;
 }
 .toolsLine:hover {
     animation-play-state: paused;
@@ -160,28 +171,6 @@ h1{
     to {
         transform: translateX(-50%);
     }
-}
-
-.green{
-    color:#0dbd0d;
-}
-.blue{
-    color: #4b4be7
-}
-.yellow{
-    color : yellow;
-}
-.black{
-    color : brown;
-}
-.whiteBlue{
-    color : rgb(22, 129, 237);
-}
-.sky{
-    color : rgb(8, 226, 242)
-}
-.pirple{
-    color : palevioletred;
 }
 h2 , h3{
     display: block;
@@ -211,27 +200,46 @@ h2 , h3{
 .question:hover{
     box-shadow: 1px 1px 15rem #fc3f37;
 }
-.servicesCon .addBtn{
-    display: block;
-    background-color: #fc3f37;
-    color : #ffffff;
-    padding : .6rem .8rem; 
-    cursor:pointer;
-    border-radius: 2px; 
+.servicesCon .addBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    cursor: pointer;
     font-weight: 600;
     text-align: center;
-    max-height: 12.5rem;
-    transition: all .5s ;
-    width: 70%;
+    padding: 0.6rem .7rem;
+    transition: all 0.3s ease;
+    border: 2px solid #fc3f37;
+    border-radius: 2px;
+    text-decoration: none;
+    width: fit-content;
 }
-.addBtn:hover , .addBtn:active , .start:hover {
-    box-shadow: 1px 1px 15px greenyellow;
-    background-color: #f05751;
+.servicesCon .addBtn:hover,
+.servicesCon .addBtn:active {
+    color: #fc3f37;
+    transform: translateY(-2px);
 }
-
+.service{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: left;
+}
+.service:hover{
+    border-left: solid 5px #fc3f37;
+}
 .service p , .whyContainer p{
     line-height: 1.5rem;
     font-weight: 500;
+    flex-grow: 1;
+}
+.surTitle{
+    margin: 0;
+    margin-top: .5rem;
+}
+.icon{
+    width: 2.5rem;
 }
 .why{
     margin-bottom:0;
@@ -470,8 +478,14 @@ form {
 } */
 @media(min-width:700px){
     h1{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         letter-spacing: 1px;
+        font-weight: 900;
+        margin-block: .5rem;
+        line-height: 45px;
+    }
+    .content p{
+        font-size: 1.2rem;
     }
     #introCon{
         width : 100%;
