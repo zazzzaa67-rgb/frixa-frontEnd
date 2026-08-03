@@ -225,6 +225,9 @@ h2 , h3{
     flex-direction: column;
     padding: 2rem;
     text-align: left;
+    background-color:#282828 ;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
 }
 .service:hover{
     border-left: solid 5px #fc3f37;
