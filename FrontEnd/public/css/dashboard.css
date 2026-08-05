@@ -15,7 +15,7 @@ body{
     color : #ffffff;
 }
 nav{
-    display: none;
+    display : none;
 }
 header{
     display : flex;
