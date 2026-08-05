@@ -14,11 +14,15 @@ body{
     background-color:#1c1c1c ;
     color : #ffffff;
 }
-.dark .white , .dark .white .linksCon a{
+.dark .white , .dark  .linksCon a{
     background-color: #282828;
     color: #ffffff;
 }
-.dark .whiteInput , .dark .dot{
+.dot{
+    background-color: #f7f7f5;
+    color: #333333;
+}
+.dark .white .whiteInput , .dark .white .dot{
     background-color: #333333;
     color: #ffffff;
 }
