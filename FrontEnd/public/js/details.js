@@ -18,7 +18,8 @@ function renderQuestion(question) {
                     name='${question.id}'
                     id="${question.id}"
                     type="${question.type}"
-                    placeholder="${question.placeholder}" required>
+                    placeholder="${question.placeholder}"
+                    class='whiteInput' required>
             </div>
         `;
     }
@@ -28,7 +29,7 @@ function renderQuestion(question) {
             <div>
                 <label for="${question.id}">${question.label}</label>
                 <textarea
-                    class='require'
+                    class='require whiteInput'
                     name ='${question.id}'
                     id="${question.id}"
                     placeholder="${question.placeholder}" required>
@@ -40,7 +41,7 @@ function renderQuestion(question) {
         return `
             <div>
                 <label for="${question.id}">${question.label}</label>
-                <select id="${question.id}" name='${question.id}'  required>
+                <select id="${question.id}" name='${question.id}' class='whiteInput'  required>
                     <option value="" selected disabled>
                         Select an option
                     </option>
@@ -56,7 +57,7 @@ function renderQuestion(question) {
             <div>
                 <label>${question.label}</label>
                 ${question.options.map(option => `
-                    <label class="radio-option">
+                    <label class="radio-option" class='whiteInput'>
                         ${option}
                         <input type="radio"  value="${option}" name="${question.id}" required>
                     </label>

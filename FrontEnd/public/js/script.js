@@ -25,17 +25,35 @@ includes.innerHTML = service.includes
     .join("");
 console.log('script added')
 }
-const btn = document.getElementById('toggle')
-btn.addEventListener('click', () => {
-    btn.classList.toggle('dark')
-    btn.querySelector('.theme-toggle__pill').textContent =
-    btn.classList.contains('dark') ? '🌙' : '☀'
-    const body = document.querySelector('body')
-    
-    if(btn.classList.contains('dark') ){
-        body.style.backgroundColor = "#1c1c1c"
-        body.style.color = '#ffffff'
-    }else{        
-    }
+const btn = document.getElementById("toggle")
+const body = document.body
 
-})
+const savedTheme = localStorage.getItem("theme")
+if (savedTheme === "dark") {
+    body.classList.add("dark")
+
+    if (btn) {
+        btn.classList.add("dark")
+        btn.querySelector(".theme-toggle__pill").textContent = "🌙"
+    }
+} else {
+    if (btn) {
+        btn.classList.remove("dark")
+        btn.querySelector(".theme-toggle__pill").textContent = "☀"
+    }
+}
+
+if (btn) {
+    btn.addEventListener("click", () => {
+        body.classList.toggle("dark")
+        btn.classList.toggle("dark")
+
+        if (body.classList.contains("dark")) {
+            btn.querySelector(".theme-toggle__pill").textContent = "🌙"
+            localStorage.setItem("theme", "dark")
+        } else {
+            btn.querySelector(".theme-toggle__pill").textContent = "☀"
+            localStorage.setItem("theme", "light")
+        }
+    })
+}

@@ -8,8 +8,6 @@ body{
     align-items: center;
     justify-content: center;
     font-family:"Source Sans 3", sans-serif;
-    background-color: #ffffff;
-    color : #1c1c1c;
 }
 #home , 
 #services , 
@@ -213,7 +211,6 @@ h1{
     width: 100%;
     overflow: hidden;
     margin: 40px 0;
-    background-color: #000000;
 }
 .toolsLine {
     display: flex;
@@ -263,7 +260,6 @@ h2{
 
 }
 .service , .question{
-    background-color: #2A2A2A;
     width : 90%;
     max-width: 26rem; 
     margin: 1rem auto;
@@ -283,7 +279,6 @@ h2{
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #ffffff;
     cursor: pointer;
     font-weight: 600;
     text-align: center;
@@ -293,6 +288,7 @@ h2{
     border-radius: 2px;
     text-decoration: none;
     width: fit-content;
+    color:#1c1c1c;
 }
 .servicesCon .addBtn:hover,
 .servicesCon .addBtn:active {
@@ -304,8 +300,6 @@ h2{
     flex-direction: column;
     padding: 2rem;
     text-align: left;
-    background-color:#282828 ;
-    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
 }
 .service:hover{
@@ -327,7 +321,6 @@ h2{
     margin-bottom:0;
 }
 #why-forixa , .toolsLine{
-    background-color: #000000;
     margin-top: 2rem;
     text-align: center;
     width : 100%;
@@ -351,8 +344,6 @@ h4{
 }
 #projects , #services .explain{
     text-align: center;
-    
-    
 }
 .project{
     width : 100%;
@@ -381,7 +372,6 @@ h4{
 .liveDemo:active {
     background-color: #f05751;
 }
-
 #faq{
     text-align: center;
 }
@@ -559,6 +549,9 @@ form {
     border :none;
 } */
 @media(min-width:720px){
+    .hamburger {
+            display: none;
+        }
     h1{
         font-size: 3.5rem;
         letter-spacing: 1px;
@@ -682,7 +675,6 @@ form {
     .linksCon a{
         text-decoration: none;
         font-size: 1.1rem;
-        color :#ffffff;
     }
     .start{
         display: block;

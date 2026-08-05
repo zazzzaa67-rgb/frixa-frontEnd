@@ -11,8 +11,6 @@ body{
     justify-content: center;
     font-family: "Source Sans 3",sans-serif;
     padding : 0 .5rem;
-    background-color: #1c1c1c;
-    color : #ffffff;
 }
 nav{
     display : none;
@@ -202,10 +200,8 @@ main a{
     padding : .4rem .5rem;
     color : #fc3f37;
     font-weight: 600;
-    background-color: #2a2a2a;
     border : 1px solid #fc3f37;
     border-radius: 3px;
-
 }
 main .del{
     display: flex;
@@ -214,7 +210,6 @@ main .del{
 .time{
     width: 43%; 
     padding : .7rem .9rem;
-    background-color: #2a2a2a;
 }
 .del i{
     font-size: 2.5rem;
