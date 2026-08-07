@@ -194,6 +194,10 @@ main a{
     text-decoration: none;
     color: #ffffff;
 }
+#markDash{
+    background-color: #1c1c1c;
+    color : #ffffff;
+}
 .price{
     
     width: 40%; 
