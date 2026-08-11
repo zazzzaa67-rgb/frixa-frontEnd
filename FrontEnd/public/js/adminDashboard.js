@@ -52,7 +52,7 @@ async function loadProjects() {
         body.innerHTML += `
             <tr>
                 <td>${project.project_name}</td>
-                <td>${project.full_name}</td>
+                <td>${project.clients.full_name}</td>
                 <td>${project.marketer_name ?? "-"}</td>
                 <td>
                     <select id="status-${project.id}">
@@ -76,8 +76,8 @@ async function loadProjects() {
                         Save
                     </button>
                 </td>
-                <td>${project.phone}</td>
-                <td>${project.email}</td>
+                <td>${project.clients.phone}</td>
+                <td>${project.clients.email}</td>
             </tr>
         `;
     });
