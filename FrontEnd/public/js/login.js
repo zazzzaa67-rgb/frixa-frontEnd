@@ -10,7 +10,7 @@ form.addEventListener("submit", async (e) => {
     try {
 
         const response = await fetch(
-            "https://forixa-backend-production.up.railway.app/api/auth/login",
+            "https://forixa-backend.vercel.app/api/auth/login",
             {
                 method: "POST",
                 headers: {

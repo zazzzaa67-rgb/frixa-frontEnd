@@ -1,6 +1,6 @@
 async function loadLeaderboard() {
     const res = await fetch(
-        "https://forixa-backend-production.up.railway.app/api/projects/leaderboard"
+        "https://forixa-backend.vercel.app/api/projects/leaderboard"
     );
     const marketers = await res.json();
     const body =
