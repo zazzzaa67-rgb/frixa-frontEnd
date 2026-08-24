@@ -30,28 +30,42 @@
             <div class="intro">
                 <div class="intro-con">
                     <span class="logo">FORI<span class='red'>X</span>A</span>
-                    <p class="red title">BUILDING MODERN DIGITAL PRODUCTS.</p>
+                    <p class="red title" data-i18n="hero.badge">BUILDING MODERN DIGITAL PRODUCTS.</p>
                 </div>
                 <div class="intro-set">
                     <button class="theme-toggle white" id="toggle">
                         <span class="theme-toggle__pill">☀</span>
                     </button>
+                    <button id="language-toggle" class="white">
+                        العربية
+                    </button>
                     <a href="nav.html" class="white"><i class="fa-solid fa-bars bars"></i></a>
                     <nav>
-                        <a href="#services">SERVICES</a>
-                        <a href="#projects">PROJECTS</a>
-                        <a href="#faq">FAQ</a>
-                        <a href="details.html">START PROJECT</a>
+                        <a href="#services" data-i18n="nav.services">SERVICES</a>
+                        <a href="#projects" data-i18n="nav.projects">PROJECTS</a>
+                        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+                        <a href="details.html" data-i18n="nav.startProject">START PROJECT</a>
                     </nav>
                 </div>
             </div>
             <div id="introCon">
                 <div class="content">
-                    <span>BUILDING MODERN</span>
-                    <h1 class="red">DIGITAL PRODUCTS</h1>
-                    <span>POWERED BY AI</span>
-                    <p>We build premium websites, AI agents, chatbots, APIs, and full-stack applications that help businesses grow faster.</p>
-                    <a href='#services'class="start">Start Your Project →</a>
+                    <span data-i18n="hero.titleTop">
+                        BUILDING MODERN
+                    </span>
+                    <h1 class="red" data-i18n="hero.titleMain">
+                        DIGITAL PRODUCTS
+                    </h1>
+                    <span data-i18n="hero.titleBottom">
+                        POWERED BY AI
+                    </span>
+                    <p data-i18n="hero.description">
+                        We build premium websites, AI agents, chatbots, APIs, and full-stack applications that help businesses grow
+                        faster.
+                    </p>
+                    <a href="#services" class="start" data-i18n="hero.button">
+                        Start Your Project →
+                    </a>
                 </div>
                 <img src="images/photo.webp" alt="devices photo" class="photo" fetchpriority="high" decoding="async">
             </div>
@@ -78,76 +92,91 @@
         </div>
         <main>
             <section id="services">
-                <h2>Our <span class='red'>Services</span></h2>
+                <h2 data-i18n="services.title">
+                    Our <span class='red'>Services</span>
+                </h2>
                 <p class="explain">Helping businesses build modern websites, AI-powered solutions, and scalable digital products.</p>
                 <div class="servicesCon">
                     <div class="service white">
                         <img src="images/icon.png" alt="service Icon" class="icon" >
-                        <h3 class="surTitle">Full-Stack Development</h3>
-                        <p>Complete web applications built with modern frontend, backend, databases, and authentication.</p>
-                        <a href="service.html?id=1" class="addBtn white" data-id="1" aria-label="our fullstack development page">View Service →</a>
+                        <h3 data-i18n="services.fullstack.title" class="surTitle">Full-Stack Development</h3>
+                        <p data-i18n="services.fullstack.description">Complete web applications built with modern frontend, backend, databases, and authentication.</p>
+                        <a data-i18n="services.fullstack.button" href="service.html?id=1" class="addBtn white" data-id="1" aria-label="our fullstack development page">View Service →</a>
                     </div>
                     <div class="service white">
                         <img src="images/icon1.png" alt="service Icon" class="icon" >
-                        <h3 class="surTitle">Portfolio Websites</h3>
-                        <p>Professional portfolio websites designed to showcase your brand, skills, and business with modern responsive design.</p>
-                        <a href="service.html?id=2" class="addBtn white" data-id="2" aria-label="our portfolio description page">View Service →</a>
+                        <h3 data-i18n="services.portfolio.title class="surTitle">Portfolio Websites</h3>
+                        <p data-i18n='services.portfolio.description'>Professional portfolio websites designed to showcase your brand, skills, and business with modern responsive design.</p>
+                        <a data-i18n="services.portfolio.button" href="service.html?id=2" class="addBtn white" data-id="2" aria-label="our portfolio description page">View Service →</a>
                     </div>
                     <div class="service white">
                         <img src="images/icon2.png" alt="service Icon" class="icon" >
-                        <h3 class="surTitle">Landing Pages</h3>
-                        <p>High-converting landing pages built to increase engagement, generate leads, and grow your business.</p>
-                        <a href="service.html?id=3" class="addBtn white" data-id="3" aria-label="Our landing pages page">View Service →</a>
+                        <h3 data-i18n="services.landing.title" class="surTitle">Landing Pages</h3>
+                        <p data-i18n="services.landing.description">High-converting landing pages built to increase engagement, generate leads, and grow your business.</p>
+                        <a data-i18n='services.landing.button' href="service.html?id=3" class="addBtn white" data-id="3" aria-label="Our landing pages page">View Service →</a>
                     </div>
                     <div class="service white">
                         <img src="images/icon3.png" alt="service Icon" class="icon" >
-                        <h3 class="surTitle">AI Chatbots</h3>
-                        <p>Intelligent AI chatbots that answer questions, automate support, and improve customer experience.</p>
-                        <a href="service.html?id=4" aria-label="AI chatbot page" class="addBtn white" data-id="4">View Service →</a>
+                        <h3 data-i18n="services.chatbots.title" class="surTitle">AI Chatbots</h3>
+                        <p data-i18n="services.chatbots.description">Intelligent AI chatbots that answer questions, automate support, and improve customer experience.</p>
+                        <a data-i18n="services.chatbots.button" href="service.html?id=4" aria-label="AI chatbot page" class="addBtn white" data-id="4">View Service →</a>
                     </div>
                     <div class="service white">
                         <img src="images/icon4.png" alt="service Icon" class="icon" >
-                        <h3 class="surTitle">API Development</h3>
-                        <p>Secure and scalable REST APIs for seamless integrations between your applications and services.</p>
-                        <a href="service.html?id=5" class="addBtn white" aria-label="our API development page" data-id="5">View Service →</a>
+                        <h3 data-i18n="services.api.title" class="surTitle">API Development</h3>
+                        <p data-i18n="services.api.description">Secure and scalable REST APIs for seamless integrations between your applications and services.</p>
+                        <a data-i18n="services.api.button" href="service.html?id=5" class="addBtn white" aria-label="our API development page" data-id="5">View Service →</a>
                     </div>
                     <div class="service white">
                         <img src="images/icon5.png" alt="service Icon" class="icon" >
-                        <h3 class="surTitle">AI Agents</h3>
-                        <p>Custom AI agents that automate workflows, analyze information, and help businesses save time.</p>
-                        <a href="service.html?id=6" class="addBtn white" aria-label="Our AI agent page">View Service →</a>
+                        <h3 data-i18n="services.agents.title" class="surTitle">AI Agents</h3>
+                        <p data-il8n="services.agents.description">Custom AI agents that automate workflows, analyze information, and help businesses save time.</p>
+                        <a data-il8n="services.agents.button" href="service.html?id=6" class="addBtn white" aria-label="Our AI agent page">View Service →</a>
                     </div>
                 </div>
             </section>
-
             <section id="why-forixa">
-                <h3>LET'S START<br> YOUR PROJECT</h3>
-                <a href="details.html" id="let">LET'S START</a>
+                <h3 data-i18n="cta.title">
+                    LET'S START<br> YOUR PROJECT
+                </h3>
+                <a href="details.html" id="let" data-i18n="cta.button">
+                    LET'S START
+                </a>
             </section>
             <section id="projects">
-                <h3>Featured <span class="red">Projects</span></h4>
-                <p class="selec">A selection of projects showcasing modern design, scalable development, and AI-powered solutions.</p>
+                    <h3 data-i18n="projects.title">
+                        Featured Projects
+                    </h3>
+                    <p class="selec" data-i18n="projects.description">
+                        A selection of projects showcasing modern design, scalable development, and AI-powered solutions.
+                    </p>
                 <div class="projectsCon">
                     <div class="project">
                         <div>
-                            <h4><span class='red'>Forixa</span> platform</h4>
+                            <h4 data-i18n="projects.forixa.title"><span class='red'>Forixa</span> platform</h4>
                             <img src="./images/portPhoto.webp" alt="forixa project photo " class="forixa-photo" >
                         </div>
                         <div>
-                            <p >A modern software agency platform featuring AI-powered assistance, secure authentication, project management, and
+                            <p data-i18n="projects.forixa.description">A modern software agency platform featuring AI-powered assistance, secure authentication, project management, and
                             responsive design built for businesses.</p>
-                            <a herf="https://forixa.site" class="liveDemo">Live demo</a>
+                            <a href="https://forixa.site" data-i18n="projects.forixa.button" class="liveDemo">Live demo</a>
                         </div>
                     </div>
                 </div>                 
             </section>
             <section id="faq" >
-                <h3>Frequently Asked <span class='red'>Questions</span></h3>
+                <h3 data-i18n="faq.title">
+                    Frequently Asked <span class="red">Questions</span>
+                </h3>
                 <div class="questions">
                     <div class="question  white">
                         <img src="images/world-map.png" class="map" alt="map world">
-                        <h4>How long does a project take?</h4>
-                        <p>Most projects are completed within 2-7 days depending on the project size and complexity.</p>
+                        <h4 data-i18n="faq.question1.title">
+                            How long does a project take?
+                        </h4>
+                        <p data-i18n="faq.question1.answer">
+                            Most projects are completed within 2-7 days depending on the project size and complexity.
+                        </p>
                         <span class="dotCir dot1"></span>
                         <span class="dotCir dot2"></span>
                         <span class="dotCir dot3"></span>
@@ -156,8 +185,12 @@
                     </div>
                     <div class="question white">
                         <img src="images/world-map.png" class="map" alt="map world">
-                        <h4>Do you build AI-powered solutions?</h4>
-                        <p>Yes. We develop AI chatbots, AI agents, and intelligent automation tailored to your business needs.</p>
+                        <h4 data-i18n="faq.question2.title">
+                            Do you build AI-powered solutions?
+                        </h4>
+                        <p data-i18n="faq.question2.answer">
+                            Yes. We develop AI chatbots, AI agents, and intelligent automation tailored to your business needs.
+                        </p>
                         <span class="dotCir dot1"></span>
                         <span class="dotCir dot2"></span>
                         <span class="dotCir dot3"></span>
@@ -166,8 +199,13 @@
                     </div>
                     <div class="question white">
                         <img src="images/world-map.png" class="map" alt="map world">
-                        <h4>Do you provide ongoing support?</h4>
-                        <p>Yes. We offer maintenance, updates, and technical support after project delivery.</p>
+                        <h4 data-i18n="faq.question3.title">
+                            Do you provide ongoing support?
+                        </h4>
+                        
+                        <p data-i18n="faq.question3.answer">
+                            Yes. We offer maintenance, updates, and technical support after project delivery.
+                        </p>
                         <span class="dotCir dot1"></span>
                         <span class="dotCir dot2"></span>
                         <span class="dotCir dot3"></span>
@@ -176,8 +214,13 @@
                     </div>
                     <div class="question white">
                         <img src="images/world-map.png" class="map" alt="map world">
-                        <h4>How do we get started?</h4>
-                        <p>Simply choose a service, contact us, and we'll discuss your project requirements before providing a timeline and quote.</p>
+                        <h4 data-i18n="faq.question4.title">
+                            How do we get started?
+                        </h4>
+                        <p data-i18n="faq.question4.answer">
+                            Simply choose a service, contact us, and we'll discuss your project requirements before providing a timeline and
+                            quote.
+                        </p>
                         <span class="dotCir dot1"></span>
                         <span class="dotCir dot2"></span>
                         <span class="dotCir dot3"></span>
@@ -200,8 +243,9 @@
         <footer class="white">
             <div class="container">
                 <span class="logo">FORI<span class='red'>X</span>A</span>
-                <p>
-                    We believe in growing together by empowering businesses through technologies and fulfilling their complex software needs
+                <p data-i18n="footer.description">
+                    We believe in growing together by empowering businesses through technologies and fulfilling their complex software
+                    needs
                     by strategic planning and development.
                 </p>
                 <div class="social">
@@ -211,19 +255,45 @@
                 </div>
             </div>
             <div class="linksCon white">
-                <span class="red">Links</span>
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#faq">Questions</a>
+                <span class="red" data-i18n="footer.links">
+                    Links
+                </span>
+
+                <a href="#home" data-i18n="footer.home">
+                    Home
+                </a>
+
+                <a href="#services" data-i18n="footer.services">
+                    Services
+                </a>
+
+                <a href="#projects" data-i18n="footer.projects">
+                    Projects
+                </a>
+
+                <a href="#faq" data-i18n="footer.questions">
+                    Questions
+                </a>
             </div>
             <div class="linksCon white">
-                <span class="red">Services</span>
-                <a class="#" href="service.html?id=1">Full-Stack Development</a>
-                <a class="#" href="service.html?id=2">Portfolio Websites</a>
-                <a class="#" href="service.html?id=3">AI Chatbots</a>
-                <a class="#" href="service.html?id=4">AI Agents</a>
-                <a class="#" href="service.html?id=5">API Development</a>
+                    <span class="red" data-i18n="footer.services">
+                        Services
+                    </span>
+                    <a href="service.html?id=1">
+                        Full-Stack Development
+                    </a>
+                    <a href="service.html?id=2">
+                        Portfolio Websites
+                    </a>
+                    <a href="service.html?id=3">
+                        AI Chatbots
+                    </a>
+                    <a href="service.html?id=4">
+                        AI Agents
+                    </a>
+                    <a href="service.html?id=5">
+                        API Development
+                    </a>
             </div>
         </footer>
         <script src="js/saveRef.js" type="module"></script>
