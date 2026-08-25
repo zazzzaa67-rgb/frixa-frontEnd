@@ -36,8 +36,10 @@
                     <button class="theme-toggle white" id="toggle">
                         <span class="theme-toggle__pill">☀</span>
                     </button>
-                    <button id="language-toggle" class="white">
-                        العربية
+                    <button id="language-toggle" class="language-toggle white" type="button">
+                        <span class="lang-current">EN</span>
+                        <span class="lang-arrow">⇄</span>
+                        <span class="lang-next">AR</span>
                     </button>
                     <a href="nav.html" class="white"><i class="fa-solid fa-bars bars"></i></a>
                     <nav>
@@ -95,7 +97,7 @@
                 <h2 data-i18n="services.title">
                     Our <span class='red'>Services</span>
                 </h2>
-                <p class="explain">Helping businesses build modern websites, AI-powered solutions, and scalable digital products.</p>
+                <p class="explain" data-i18n="services.description">Helping businesses build modern websites, AI-powered solutions, and scalable digital products.</p>
                 <div class="servicesCon">
                     <div class="service white">
                         <img src="images/icon.png" alt="service Icon" class="icon" >
@@ -105,7 +107,7 @@
                     </div>
                     <div class="service white">
                         <img src="images/icon1.png" alt="service Icon" class="icon" >
-                        <h3 data-i18n="services.portfolio.title class="surTitle">Portfolio Websites</h3>
+                        <h3 data-i18n="services.portfolio.title" class="surTitle">Portfolio Websites</h3>
                         <p data-i18n='services.portfolio.description'>Professional portfolio websites designed to showcase your brand, skills, and business with modern responsive design.</p>
                         <a data-i18n="services.portfolio.button" href="service.html?id=2" class="addBtn white" data-id="2" aria-label="our portfolio description page">View Service →</a>
                     </div>
@@ -130,8 +132,8 @@
                     <div class="service white">
                         <img src="images/icon5.png" alt="service Icon" class="icon" >
                         <h3 data-i18n="services.agents.title" class="surTitle">AI Agents</h3>
-                        <p data-il8n="services.agents.description">Custom AI agents that automate workflows, analyze information, and help businesses save time.</p>
-                        <a data-il8n="services.agents.button" href="service.html?id=6" class="addBtn white" aria-label="Our AI agent page">View Service →</a>
+                        <p data-i18n="services.agents.description">Custom AI agents that automate workflows, analyze information, and help businesses save time.</p>
+                        <a data-i18n="services.agents.button" href="service.html?id=6" class="addBtn white" aria-label="Our AI agent page">View Service →</a>
                     </div>
                 </div>
             </section>
@@ -258,19 +260,15 @@
                 <span class="red" data-i18n="footer.links">
                     Links
                 </span>
-
                 <a href="#home" data-i18n="footer.home">
                     Home
                 </a>
-
                 <a href="#services" data-i18n="footer.services">
                     Services
                 </a>
-
                 <a href="#projects" data-i18n="footer.projects">
                     Projects
                 </a>
-
                 <a href="#faq" data-i18n="footer.questions">
                     Questions
                 </a>
@@ -279,25 +277,26 @@
                     <span class="red" data-i18n="footer.services">
                         Services
                     </span>
-                    <a href="service.html?id=1">
+                    <a href="service.html?id=1" data-i18n="footer.fullstack">
                         Full-Stack Development
                     </a>
-                    <a href="service.html?id=2">
+                    <a href="service.html?id=2" data-i18n="footer.portfolio">
                         Portfolio Websites
                     </a>
-                    <a href="service.html?id=3">
+                    <a href="service.html?id=3" data-i18n="footer.chatbots">
                         AI Chatbots
                     </a>
-                    <a href="service.html?id=4">
+                    <a href="service.html?id=4" data-i18n="footer.agents">
                         AI Agents
                     </a>
-                    <a href="service.html?id=5">
+                    <a href="service.html?id=5" data-i18n="footer.api">
                         API Development
                     </a>
             </div>
         </footer>
         <script src="js/saveRef.js" type="module"></script>
         <script src="js/script.js" type="module" ></script>
+        <script src="js/i18n.js"></script>
         <script src="js/chatbot.js"></script>
     </body>
 </html>
