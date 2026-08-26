@@ -206,9 +206,8 @@ html[dir="rtl"] #services p {
 html[dir='rtl'] .logo {
     text-align: right;
     margin-right: 0;
-    
-
 }
+html[dir='rtl'] 
 .content p ,.explain{
     max-width: 26rem;
     line-height: 23px;

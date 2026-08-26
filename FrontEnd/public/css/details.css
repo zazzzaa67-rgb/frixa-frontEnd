@@ -17,6 +17,13 @@ body{
     margin-top: .7rem;
     resize: none;
 }
+html[dir='rtl'] #projectForm{
+    display: flex; 
+    flex-direction: column;
+    text-align: right;
+    align-items : right ; 
+    
+} 
 #projectInfo{
     position: relative;
 }
