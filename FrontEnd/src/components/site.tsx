@@ -17,11 +17,11 @@ export function SiteHeader() {
       <button className="icon-button" type="button" onClick={() => setDark(!dark)} aria-label={ar ? "تغيير المظهر" : "Toggle theme"}>{dark ? "☾" : "☀"}</button>
       <button className="language-button" type="button" onClick={() => setLanguage(ar ? "en" : "ar")}>{ar ? "EN" : "العربية"}</button>
       <nav id="main-navigation" className={menuOpen ? "is-open" : ""} aria-label="Main navigation" onClick={(event) => { if ((event.target as HTMLElement).closest("a")) setMenuOpen(false); }}>
-        <a href="/#services">{ar ? "الخدمات" : "Services"}</a>
+        <Link href="/#services">{ar ? "الخدمات" : "Services"}</Link>
         <Link href="/about">{ar ? "من نحن" : "About Us"}</Link>
-        <a href="/#projects">{ar ? "المشاريع" : "Projects"}</a>
-        <a href="/#faq">{ar ? "الأسئلة" : "FAQ"}</a>
-        <a href="/#contact">{ar ? "تواصل معنا" : "Contact Us"}</a>
+        <Link href="/#projects">{ar ? "المشاريع" : "Projects"}</Link>
+        <Link href="/#faq">{ar ? "الأسئلة" : "FAQ"}</Link>
+        <Link href="/#contact">{ar ? "تواصل معنا" : "Contact Us"}</Link>
         <Link className="nav-cta" href="/details">{ar ? "ابدأ مشروعك" : "Start Project"}</Link>
       </nav>
     </div>
@@ -34,7 +34,7 @@ export function SiteFooter() {
     <div><Link className="wordmark" href="/">FORI<span>X</span>A</Link><p>{ar ? "نساعد الشركات على النمو من خلال التكنولوجيا والتطوير الاستراتيجي." : "We help businesses grow through technology, strategic planning, and software development."}</p>
       <div className="social-links"><a href="https://x.com/forixau35s" target="_blank" rel="noreferrer">X</a><a href="https://www.linkedin.com/company/forixa" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://www.facebook.com/profile.php?id=61592712089009" target="_blank" rel="noreferrer">Facebook</a></div>
     </div>
-    <div className="footer-links"><strong>{ar ? "روابط" : "Links"}</strong><a href="/#home">{ar ? "الرئيسية" : "Home"}</a><a href="/#services">{ar ? "الخدمات" : "Services"}</a><a href="/#projects">{ar ? "المشاريع" : "Projects"}</a><a href="/#contact">{ar ? "تواصل معنا" : "Contact Us"}</a><Link href="/privacy">Privacy Policy</Link><Link href="/refund">Refund Policy</Link><Link href="/terms">Terms of Service</Link></div>
+    <div className="footer-links"><strong>{ar ? "روابط" : "Links"}</strong><Link href="/#home">{ar ? "الرئيسية" : "Home"}</Link><Link href="/#services">{ar ? "الخدمات" : "Services"}</Link><Link href="/#projects">{ar ? "المشاريع" : "Projects"}</Link><Link href="/#contact">{ar ? "تواصل معنا" : "Contact Us"}</Link><Link href="/privacy">Privacy Policy</Link><Link href="/refund">Refund Policy</Link><Link href="/terms">Terms of Service</Link></div>
   </footer>;
 }
 

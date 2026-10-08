@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { SiteFooter, SiteHeader } from "@/components/site";
 
 const API = "https://forixa-backend.vercel.app/api/admin/login";
 
 export default function AdminLoginPage() {
+  const router = useRouter();
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
 
@@ -20,7 +22,7 @@ export default function AdminLoginPage() {
       const result = await response.json();
       if (!response.ok) throw new Error(result.message || "Could not sign in.");
       localStorage.setItem("adminToken", result.token);
-      window.location.assign("/admin-dashboard");
+      router.push("/admin-dashboard");
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Could not sign in.");
     } finally { setBusy(false); }

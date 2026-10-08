@@ -27,7 +27,7 @@ export default function HomePage() {
         <div><span className="eyebrow">{ar ? "نبني منتجات رقمية عصرية" : "Building modern digital products"}</span>
           <h1>{ar ? <>منتجات رقمية<br /><span className="red">مدعومة بالذكاء الاصطناعي</span></> : <>BUILDING MODERN<br /><span className="red">DIGITAL PRODUCTS</span><br />POWERED BY AI</>}</h1>
           <p>{ar ? "نبني مواقع احترافية ووكلاء ذكاء اصطناعي وروبوتات محادثة وواجهات برمجية وتطبيقات متكاملة تساعد الشركات على النمو." : "We build premium websites, AI agents, chatbots, APIs, and full-stack applications that help businesses grow faster."}</p>
-          <div className="hero-actions"><a className="button primary" href="#services">{ar ? "ابدأ مشروعك ←" : "Start Your Project →"}</a><a className="button secondary" href="#contact">{ar ? "تواصل معنا" : "Contact Us"}</a></div>
+          <div className="hero-actions"><Link className="button primary" href="#services">{ar ? "ابدأ مشروعك ←" : "Start Your Project →"}</Link><Link className="button secondary" href="#contact">{ar ? "تواصل معنا" : "Contact Us"}</Link></div>
         </div>
         <img className="hero-image" src="/images/photo.webp" alt="FORIXA digital products" />
       </section>

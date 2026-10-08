@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export type MarketerProfile = {
   full_name: string;
@@ -23,6 +24,7 @@ export type MarketerProject = {
 const API = "https://forixa-backend.vercel.app";
 
 export function useMarketerData() {
+  const router = useRouter();
   const [profile, setProfile] = useState<MarketerProfile | null>(null);
   const [projects, setProjects] = useState<MarketerProject[]>([]);
   const [loading, setLoading] = useState(true);
@@ -31,7 +33,7 @@ export function useMarketerData() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
-      window.location.replace("/login");
+      router.replace("/login");
       return;
     }
 
@@ -42,7 +44,7 @@ export function useMarketerData() {
     ]).then(async ([profileResponse, projectsResponse]) => {
       if (profileResponse.status === 401 || profileResponse.status === 403) {
         localStorage.removeItem("token");
-        window.location.replace("/login");
+        router.replace("/login");
         return;
       }
       if (!profileResponse.ok) throw new Error("Could not load your account.");
@@ -58,7 +60,7 @@ export function useMarketerData() {
     }).catch((loadError: unknown) => {
       setError(loadError instanceof Error ? loadError.message : "Could not load your account.");
     }).finally(() => setLoading(false));
-  }, []);
+  }, [router]);
 
   return { profile, projects, loading, error };
 }

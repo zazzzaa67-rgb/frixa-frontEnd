@@ -1,16 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState, type ReactNode } from "react";
 import { useSite } from "./providers";
 
 export function DashboardShell({ children, marketer = false }: { children: ReactNode; marketer?: boolean }) {
   const ar = useSite().language === "ar";
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   function logout() {
     localStorage.removeItem("token");
     localStorage.removeItem("marketer");
-    window.location.assign("/login");
+    router.push("/login");
   }
 
   return <div className="dashboard-layout" dir={ar ? "rtl" : "ltr"}>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiteFooter, SiteHeader } from "@/components/site";
 
 type PolicyKey = "privacy" | "refund" | "terms";
@@ -55,7 +56,7 @@ export function PolicyPage({ policy }: { policy: PolicyKey }) {
           {section.items && <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
         </section>)}
       </article>
-      <p className="policy-back"><a href="/">← Back to FORIXA</a></p>
+      <p className="policy-back"><Link href="/">← Back to FORIXA</Link></p>
     </main>
     <SiteFooter />
   </>;
