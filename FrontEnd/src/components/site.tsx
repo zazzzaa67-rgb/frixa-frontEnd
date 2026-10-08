@@ -18,7 +18,7 @@ export function SiteHeader() {
       <button className="language-button" type="button" onClick={() => setLanguage(ar ? "en" : "ar")}>{ar ? "EN" : "العربية"}</button>
       <nav id="main-navigation" className={menuOpen ? "is-open" : ""} aria-label="Main navigation" onClick={(event) => { if ((event.target as HTMLElement).closest("a")) setMenuOpen(false); }}>
         <a href="/#services">{ar ? "الخدمات" : "Services"}</a>
-        <Link href="/pricing">{ar ? "الأسعار" : "Pricing"}</Link>
+        <Link href="/about">{ar ? "من نحن" : "About Us"}</Link>
         <a href="/#projects">{ar ? "المشاريع" : "Projects"}</a>
         <a href="/#faq">{ar ? "الأسئلة" : "FAQ"}</a>
         <a href="/#contact">{ar ? "تواصل معنا" : "Contact Us"}</a>
