@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
 type Language = "en" | "ar";
@@ -10,12 +10,11 @@ const SiteContext = createContext<SiteContextValue | null>(null);
 export function SiteProviders({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("en");
   const [dark, setDark] = useState(false);
+  const themeInitialized = useRef(false);
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language");
-    const savedTheme = localStorage.getItem("theme");
     if (savedLanguage === "ar") setLanguage("ar");
-    if (savedTheme === "dark") setDark(true);
     const refCode = new URLSearchParams(window.location.search).get("ref");
     if (refCode) localStorage.setItem("refCode", refCode);
     const savedRef = localStorage.getItem("refCode");
@@ -36,7 +35,17 @@ export function SiteProviders({ children }: { children: ReactNode }) {
   }, [language]);
 
   useEffect(() => {
-    document.body.dataset.theme = dark ? "dark" : "light";
+    if (!themeInitialized.current) {
+      themeInitialized.current = true;
+      const initialTheme = localStorage.getItem("theme");
+      const initialDark = initialTheme === "dark";
+      document.documentElement.dataset.theme = initialDark ? "dark" : "light";
+      if (initialTheme === null) localStorage.setItem("theme", "light");
+      if (initialDark !== dark) setDark(initialDark);
+      return;
+    }
+
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
     localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
 
