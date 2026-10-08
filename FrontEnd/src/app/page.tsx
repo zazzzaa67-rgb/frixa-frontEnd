@@ -7,6 +7,7 @@ import { services } from "@/lib/services";
 
 export default function HomePage() {
   const ar = useSite().language === "ar";
+  const technologies = ["Node.js", "Express.js", "Responsive design", "JavaScript", "Chatbots", "AI Agents", "React.js"];
   const faqs = ar ? [
     ["كم يستغرق تنفيذ المشروع؟", "تُنجز معظم المشاريع خلال 2 إلى 7 أيام حسب حجم المشروع وتعقيده."],
     ["هل تقدمون حلولًا بالذكاء الاصطناعي؟", "نطوّر روبوتات محادثة ووكلاء ذكاء اصطناعي وحلول أتمتة تناسب احتياجات عملك."],
@@ -30,7 +31,7 @@ export default function HomePage() {
         </div>
         <img className="hero-image" src="/images/photo.webp" alt="FORIXA digital products" />
       </section>
-      <div className="tools-strip" aria-label="Technologies and services"><div className="tools-strip-track"><span>Node.js | Express.js | Responsive design | JavaScript | Chatbots | AI Agents | React.js</span><span aria-hidden="true">Node.js | Express.js | Responsive design | JavaScript | Chatbots | AI Agents | React.js</span></div></div>
+      <div className="tools-strip" aria-label="Technologies and services"><div className="tools-strip-track">{[0, 1].map((copy) => <div className="tools-strip-group" key={copy} aria-hidden={copy === 1}>{technologies.map((technology) => <span className="tools-strip-item" key={technology}>{technology}</span>)}</div>)}</div></div>
       <section className="page-section" id="services"><div className="section-heading"><h2>{ar ? <>خدماتنا</> : <>Our <span className="red">Services</span></>}</h2><p className="section-lead">{ar ? "نساعد الشركات على بناء مواقع عصرية وحلول ذكاء اصطناعي ومنتجات رقمية قابلة للتوسع." : "Helping businesses build modern websites, AI-powered solutions, and scalable digital products."}</p></div>
         <div className="service-grid">{services.map((service) => <article className="service-card" key={service.id}><img src={service.image} alt="" /><h3>{ar ? ["", "تطوير Full-Stack", "مواقع الأعمال الشخصية", "صفحات الهبوط", "روبوتات المحادثة بالذكاء الاصطناعي", "تطوير واجهات API", "وكلاء الذكاء الاصطناعي"][service.id] : service.title}</h3><p>{service.description}</p><Link className="text-link" href={`/service/${service.id}`}>{ar ? "عرض الخدمة ←" : "View Service →"}</Link></article>)}</div>
       </section>
